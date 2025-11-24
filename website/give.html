@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Support Pioneer High School students through donations - one-time gifts, monthly giving, PayPal, checks, and legacy giving options.">
+    <title>Ways to Give - Pioneer High School Education Foundation</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .donation-amount {
+            background-color: var(--light-gray);
+            border: 2px solid var(--medium-gray);
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .donation-amount:hover {
+            border-color: var(--primary-blue);
+            background-color: var(--white);
+        }
+        .donation-amount.selected {
+            background-color: var(--primary-blue);
+            border-color: var(--primary-blue);
+            color: var(--white);
+        }
+        .donation-amount-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 0.5rem;
+        }
+        .donation-amount.selected .donation-amount-value {
+            color: var(--primary-gold);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <div class="contact-info">
+                    <span>1290 Blossom Hill Road, San Jose, CA 95118</span>
+                    <a href="tel:408-535-6310">408-535-6310</a>
+                    <a href="mailto:educationfoundationphs@gmail.com">educationfoundationphs@gmail.com</a>
+                </div>
+            </div>
+        </div>
+
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="images/ph-logo.png" alt="Pioneer High School Logo" style="height: 60px; width: auto;">
+                    <div>
+                        <h1>Pioneer Education Foundation</h1>
+                        <div class="logo-subtitle">Supporting Mustang Excellence</div>
+                    </div>
+                </div>
+
+                <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="about.html">About ▾</a>
+                        <div class="dropdown-content">
+                            <a href="about.html#mission">Mission & Vision</a>
+                            <a href="about.html#board">Board of Directors</a>
+                            <a href="about.html#history">Our History</a>
+                            <a href="about.html#financials">Financials</a>
+                        </div>
+                    </li>
+                    <li><a href="impact.html">Impact</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li class="dropdown">
+                        <a href="give.html">Ways to Give ▾</a>
+                        <div class="dropdown-content">
+                            <a href="#donate-now">Donate Now</a>
+                            <a href="#monthly">Monthly Giving</a>
+                            <a href="#legacy">Legacy Giving</a>
+                        </div>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="give.html" class="btn-donate">Donate</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="hero" style="height: 180px;">
+        <div class="hero-slide active" style="background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);">
+            <div class="hero-overlay">
+                <div class="hero-content">
+                    <h1>Ways to Give</h1>
+                    <p>Your generosity transforms the lives of Pioneer students</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Impact -->
+    <section>
+        <div class="container">
+            <div class="section-header">
+                <h2>Support a Cause</h2>
+                <p>Choose a specific program to support with your donation</p>
+            </div>
+
+            <div class="callout-grid">
+                <div class="callout-card">
+                    <div class="callout-content">
+                        <h3>Mock Trial County Competition</h3>
+                        <p>Support our Mock Trial team as they compete in the Santa Clara County High School Mock Trial Competition (January-February 2026). 
+                            Students will argue "The People v. Fromholz" case, developing critical thinking, public speaking, and teamwork skills. 
+                            <b>Your donation helps cover the $725 team registration fee and related expenses.</b></p>
+                    </div>
+                </div>
+
+                <div class="callout-card">
+                    <div class="callout-content">
+                        <h3>Physics Dynamics Cart & Track System</h3>
+                        <p>Fund a Vernier Dynamics Cart and Track System with Go Direct Sensor Carts for our physics classroom. This hands-on equipment features wireless motorized sensor carts that allow students to investigate motion, forces, Newton's laws, momentum, and collisions with real-time data collection and analysis.<br>
+                        <b>This equipment is used by the entire freshman class.</b></p>
+                    </div>
+                </div>
+
+                <div class="callout-card">
+                    <div class="callout-content">
+                        <h3>PE Weightlifting Room Displays</h3>
+                        <p>With this technology, we’ll be able to design and deliver curriculum for weight training, dance, yoga, and mental health lessons, including meditation and mandatory SEL classes.
+<b>This funding would directly impact over 800 students</b>, including PE students, weight lifting students and student athletes.  This is more than half of our school’s population and would significantly enhance student engagement and access to diverse physical and wellness activities.</p>
+                    </div>
+                </div>
+
+                <div class="callout-card">
+                    <div class="callout-content">
+                        <h3>Yearbook Design Team iPads</h3>
+                        <p>Provide iPads for the yearbook design team to create and capture memories for the Pioneer community</p>
+                    </div>
+                </div>
+
+                <div class="callout-card">
+                    <div class="callout-content">
+                        <h3>Pony Express Student Newspaper</h3>
+                        <p>Support the Pony Express student newspaper with equipment, printing costs, and journalism resources</p>
+                    </div>
+                </div>
+
+                <div class="callout-card">
+                    <div class="callout-content">
+                        <h3>A classroom supply of Scientific Calculators</h3>
+                        <p>Having a class set of calculators that are uniform will allow the students to use a calculator effectively and gives them the ability to perform calculations more efficiently so they don't have to expend mental energy figuring out how to use whichever model calculator they end up with at their table.
+                        <b>This would benefit over 130 students per year.</b>
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donate Now -->
+    <section id="donate-now" style="background-color: var(--light-gray);">
+        <div class="container">
+            <div class="section-header">
+                <h2>Donate Today</h2>
+                <p>Choose your preferred giving method</p>
+            </div>
+
+            <div style="max-width: 900px; margin: 0 auto;">
+                <!-- PayPal Donation -->
+                <div style="background-color: white; padding: 2.5rem; border-radius: 8px; margin-bottom: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                    <h3 style="color: var(--primary-blue); margin-bottom: 1.5rem; text-align: center;">💳 Online Donation via PayPal</h3>
+
+                    <p style="text-align: center; margin-bottom: 2rem;">Select a suggested amount or enter a custom amount:</p>
+
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; margin-bottom: 2rem;">
+                        <div class="donation-amount" data-amount="5">
+                            <div class="donation-amount-value">$5</div>
+                            <div>Monthly</div>
+                        </div>
+                        <div class="donation-amount" data-amount="10">
+                            <div class="donation-amount-value">$10</div>
+                            <div>Monthly</div>
+                        </div>
+                        <div class="donation-amount" data-amount="25">
+                            <div class="donation-amount-value">$25</div>
+                            <div>Monthly</div>
+                        </div>
+                        <div class="donation-amount" data-amount="40">
+                            <div class="donation-amount-value">$40</div>
+                            <div>Monthly</div>
+                        </div>
+                        <div class="donation-amount" data-amount="100">
+                            <div class="donation-amount-value">$100</div>
+                            <div>One-time</div>
+                        </div>
+                        <div class="donation-amount" data-amount="250">
+                            <div class="donation-amount-value">$250</div>
+                            <div>One-time</div>
+                        </div>
+                    </div>
+
+                    <div style="text-align: center; margin-bottom: 2rem;">
+                        <label for="customAmount" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Or enter a custom amount:</label>
+                        <input type="number" id="customAmount" placeholder="Enter amount" style="padding: 0.75rem; border: 2px solid var(--medium-gray); border-radius: 4px; font-size: 1rem; width: 200px; text-align: center;">
+                    </div>
+
+                    <div style="text-align: center; background-color: var(--light-gray); padding: 1.5rem; border-radius: 8px;">
+                        <p style="margin-bottom: 1rem; font-size: 1.1rem;">
+                            <strong>Tax ID: 20-5727442</strong>
+                        </p>
+                        <p style="margin-bottom: 1.5rem; color: var(--text-light);">
+                            All donations are tax-deductible to the fullest extent allowed by law.
+                            You will receive a receipt for your records.
+                        </p>
+                        <p style="margin-bottom: 1rem; font-weight: 600;">Scan to donate with PayPal:</p>
+                        <img src="images/paypal-qrcode.png" alt="PayPal QR Code" style="max-width: 200px; margin-bottom: 1rem;">
+                    </div>
+                </div>
+
+                <!-- Check Payment -->
+                <div style="background-color: white; padding: 2.5rem; border-radius: 8px; margin-bottom: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                    <h3 style="color: var(--primary-blue); margin-bottom: 1.5rem; text-align: center;">✉️ Mail a Check</h3>
+                    <div style="background-color: var(--light-gray); padding: 2rem; border-radius: 8px; text-align: center;">
+                        <p style="margin-bottom: 1rem; font-size: 1.1rem;">
+                            Make checks payable to:<br>
+                            <strong style="color: var(--primary-blue); font-size: 1.2rem;">Pioneer High School Education Foundation</strong>
+                        </p>
+                        <p style="margin-bottom: 0; line-height: 1.8;">
+                            Mail to:<br>
+                            <strong>Pioneer High School Education Foundation</strong><br>
+                            1290 Blossom Hill Road<br>
+                            San Jose, CA 95118
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Monthly Giving -->
+    <section id="monthly">
+        <div class="container">
+            <div class="section-header">
+                <h2>Monthly Giving</h2>
+                <p>Sustained support that creates lasting impact</p>
+            </div>
+
+            <div style="max-width: 900px; margin: 0 auto;">
+                <div style="background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%); padding: 3rem; border-radius: 8px; color: white; text-align: center; margin-bottom: 2rem;">
+                    <h3 style="color: var(--primary-gold); font-size: 2rem; margin-bottom: 1rem;">Join the Mustang Circle</h3>
+                    <p style="font-size: 1.2rem; margin-bottom: 2rem; color: white;">
+                        Monthly donors provide the foundation with predictable, sustainable support
+                        that allows us to plan long-term programs and maximize our impact.
+                    </p>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                        <div>
+                            <div style="font-size: 3rem; font-weight: 700; color: var(--primary-gold);">$5</div>
+                            <div style="font-size: 1.1rem;">per month</div>
+                            <div style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.9;">= $60/year</div>
+                        </div>
+                        <div>
+                            <div style="font-size: 3rem; font-weight: 700; color: var(--primary-gold);">$10</div>
+                            <div style="font-size: 1.1rem;">per month</div>
+                            <div style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.9;">= $120/year</div>
+                        </div>
+                        <div>
+                            <div style="font-size: 3rem; font-weight: 700; color: var(--primary-gold);">$25</div>
+                            <div style="font-size: 1.1rem;">per month</div>
+                            <div style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.9;">= $300/year</div>
+                        </div>
+                        <div>
+                            <div style="font-size: 3rem; font-weight: 700; color: var(--primary-gold);">$40</div>
+                            <div style="font-size: 1.1rem;">per month</div>
+                            <div style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.9;">= $480/year</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="callout-grid">
+                    <div class="callout-card">
+                        <div class="callout-content">
+                            <h4>🎯 Predictable Support</h4>
+                            <p>Monthly giving allows us to plan programs with confidence and maximize impact.</p>
+                        </div>
+                    </div>
+                    <div class="callout-card">
+                        <div class="callout-content">
+                            <h4>📧 Exclusive Updates</h4>
+                            <p>Receive special updates about how your monthly support is making a difference.</p>
+                        </div>
+                    </div>
+                    <div class="callout-card">
+                        <div class="callout-content">
+                            <h4>🔄 Easy Management</h4>
+                            <p>Adjust or cancel your monthly gift at any time through PayPal.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a href="#donate-now" class="btn" style="background-color: var(--primary-blue); color: white; padding: 1rem 2rem; border-radius: 25px; display: inline-block;">
+                        Set Up Monthly Giving
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recognition Levels -->
+    <section style="background-color: var(--light-gray);">
+        <div class="container">
+            <div class="section-header">
+                <h2>Donor Recognition</h2>
+                <p>Honoring our generous supporters</p>
+            </div>
+
+            <div style="max-width: 900px; margin: 0 auto;">
+                <div class="callout-grid">
+                    <div class="callout-card">
+                        <div class="callout-content" style="text-align: center;">
+                            <div style="font-size: 2.5rem; margin-bottom: 1rem;">🏆</div>
+                            <h3 style="color: var(--primary-blue);">Mustang Champion</h3>
+                            <p style="font-size: 1.5rem; font-weight: 700; color: var(--primary-gold); margin: 1rem 0;">$5,000+</p>
+                            <p>Highest level recognition on website, annual report, and events. Personal impact report and invitation to exclusive donor events.</p>
+                        </div>
+                    </div>
+
+                    <div class="callout-card">
+                        <div class="callout-content" style="text-align: center;">
+                            <div style="font-size: 2.5rem; margin-bottom: 1rem;">🥇</div>
+                            <h3 style="color: var(--primary-blue);">Pioneer Leader</h3>
+                            <p style="font-size: 1.5rem; font-weight: 700; color: var(--primary-gold); margin: 1rem 0;">$2,500 - $4,999</p>
+                            <p>Prominent recognition on website and annual report. Invitation to special donor events and program updates.</p>
+                        </div>
+                    </div>
+
+                    <div class="callout-card">
+                        <div class="callout-content" style="text-align: center;">
+                            <div style="font-size: 2.5rem; margin-bottom: 1rem;">🥈</div>
+                            <h3 style="color: var(--primary-blue);">Mustang Society</h3>
+                            <p style="font-size: 1.5rem; font-weight: 700; color: var(--primary-gold); margin: 1rem 0;">$1,000 - $2,499</p>
+                            <p>Recognition on website and annual report. Regular impact updates about foundation programs.</p>
+                        </div>
+                    </div>
+
+                    <div class="callout-card">
+                        <div class="callout-content" style="text-align: center;">
+                            <div style="font-size: 2.5rem; margin-bottom: 1rem;">🥉</div>
+                            <h3 style="color: var(--primary-blue);">Pioneer Circle</h3>
+                            <p style="font-size: 1.5rem; font-weight: 700; color: var(--primary-gold); margin: 1rem 0;">$500 - $999</p>
+                            <p>Website and annual report listing. Quarterly impact newsletters.</p>
+                        </div>
+                    </div>
+
+                    <div class="callout-card">
+                        <div class="callout-content" style="text-align: center;">
+                            <div style="font-size: 2.5rem; margin-bottom: 1rem;">⭐</div>
+                            <h3 style="color: var(--primary-blue);">Supporter</h3>
+                            <p style="font-size: 1.5rem; font-weight: 700; color: var(--primary-gold); margin: 1rem 0;">$250 - $499</p>
+                            <p>Annual report recognition and impact updates.</p>
+                        </div>
+                    </div>
+
+                    <div class="callout-card">
+                        <div class="callout-content" style="text-align: center;">
+                            <div style="font-size: 2.5rem; margin-bottom: 1rem;">💛</div>
+                            <h3 style="color: var(--primary-blue);">Friend</h3>
+                            <p style="font-size: 1.5rem; font-weight: 700; color: var(--primary-gold); margin: 1rem 0;">Up to $249</p>
+                            <p>Our heartfelt gratitude and annual impact summary.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <p style="text-align: center; margin-top: 2rem; font-style: italic; color: var(--text-light);">
+                    Recognition levels based on cumulative annual giving. Donors may opt for anonymous recognition.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Legacy Giving -->
+    <section id="legacy">
+        <div class="container">
+            <div class="section-header">
+                <h2>Legacy & Planned Giving</h2>
+                <p>Create a lasting impact for future generations of Pioneer students</p>
+            </div>
+
+            <div style="max-width: 900px; margin: 0 auto;">
+                <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem; text-align: center;">
+                    Legacy gifts ensure that Pioneer High School students benefit from exceptional educational
+                    opportunities for generations to come. Your planned gift can take many forms and may provide
+                    significant tax benefits for you and your family.
+                </p>
+
+                <div class="callout-grid">
+                    <div class="callout-card">
+                        <div class="callout-content">
+                            <h4>Bequests</h4>
+                            <p>Include the foundation in your will or living trust. This simple, flexible option allows you to maintain control of your assets during your lifetime.</p>
+                        </div>
+                    </div>
+
+                    <div class="callout-card">
+                        <div class="callout-content">
+                            <h4>Beneficiary Designations</h4>
+                            <p>Name the foundation as a beneficiary of your retirement account, life insurance policy, or other financial accounts.</p>
+                        </div>
+                    </div>
+
+                    <div class="callout-card">
+                        <div class="callout-content">
+                            <h4>Memorial & Tribute Gifts</h4>
+                            <p>Honor a loved one, celebrate a special occasion, or create a named fund that reflects your values and interests.</p>
+                        </div>
+                    </div>
+
+                    <div class="callout-card">
+                        <div class="callout-content">
+                            <h4>Charitable Trusts</h4>
+                            <p>Establish a charitable remainder or lead trust that provides income to you or your family while supporting the foundation.</p>
+                        </div>
+                    </div>
+
+                    <div class="callout-card">
+                        <div class="callout-content">
+                            <h4>Endowment Gifts</h4>
+                            <p>Create a permanent source of funding that generates ongoing support for specific programs or scholarships.</p>
+                        </div>
+                    </div>
+
+                    <div class="callout-card">
+                        <div class="callout-content">
+                            <h4>Stock & Securities</h4>
+                            <p>Donate appreciated securities and potentially avoid capital gains taxes while receiving a charitable deduction.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="background-color: var(--light-gray); padding: 2rem; border-radius: 8px; margin-top: 2rem;">
+                    <h4 style="color: var(--primary-blue); margin-bottom: 1rem;">Sample Bequest Language</h4>
+                    <p style="font-style: italic; line-height: 1.8; border-left: 4px solid var(--primary-gold); padding-left: 1rem;">
+                        "I give [specific dollar amount, percentage of estate, or description of property] to
+                        Pioneer High School Education Foundation, a California non-profit corporation,
+                        Tax ID 20-5727442, located in San Jose, California, for its general purposes
+                        [or for the specific purpose of ___________]."
+                    </p>
+                </div>
+
+                <div style="text-align: center; margin-top: 2rem;">
+                    <p style="margin-bottom: 1rem;">
+                        <strong>Interested in learning more about legacy giving?</strong>
+                    </p>
+                    <a href="contact.html" class="btn" style="background-color: var(--primary-blue); color: white; padding: 1rem 2rem; border-radius: 25px; display: inline-block;">
+                        Contact Us for Confidential Discussion
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Other Ways to Give -->
+    <section style="background-color: var(--light-gray);">
+        <div class="container">
+            <div class="section-header">
+                <h2>Other Ways to Support</h2>
+                <p>Beyond financial contributions</p>
+            </div>
+
+            <div class="callout-grid">
+                <div class="callout-card">
+                    <div class="callout-content">
+                        <h3>🤝 Volunteer Your Time</h3>
+                        <p>Help at events, serve on committees, mentor students, or share your professional expertise.</p>
+                        <a href="contact.html" style="color: var(--primary-blue); font-weight: 600;">Learn More →</a>
+                    </div>
+                </div>
+
+                <div class="callout-card">
+                    <div class="callout-content">
+                        <h3>🏢 Corporate Sponsorship</h3>
+                        <p>Partner with us through event sponsorships, matching gift programs, or employee engagement.</p>
+                        <a href="contact.html" style="color: var(--primary-blue); font-weight: 600;">Explore Options →</a>
+                    </div>
+                </div>
+
+                <div class="callout-card">
+                    <div class="callout-content">
+                        <h3>📦 In-Kind Donations</h3>
+                        <p>Donate goods or services such as equipment, supplies, venue space, or professional services.</p>
+                        <a href="contact.html" style="color: var(--primary-blue); font-weight: 600;">Contact Us →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tax Information -->
+    <section>
+        <div class="container" style="max-width: 900px;">
+            <div style="background-color: var(--light-gray); padding: 2rem; border-radius: 8px; text-align: center;">
+                <h3 style="color: var(--primary-blue); margin-bottom: 1rem;">Tax Deductibility</h3>
+                <p style="margin-bottom: 1rem; line-height: 1.8;">
+                    Pioneer High School Education Foundation is a qualified 501(c)(3) tax-exempt organization.
+                    All donations are tax-deductible to the fullest extent allowed by law.
+                </p>
+                <p style="font-weight: 600; font-size: 1.1rem; color: var(--primary-blue);">
+                    Tax ID: 20-5727442
+                </p>
+                <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-light);">
+                    Please consult with your tax advisor regarding the deductibility of your specific contribution.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter-signup">
+        <div class="container">
+            <h3>Stay Connected</h3>
+            <p>Receive updates about how your generosity is making an impact</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email address" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Pioneer Education Foundation</h3>
+                    <p>1290 Blossom Hill Road<br>
+                    San Jose, CA 95118</p>
+                    <p>Tax ID: 20-5727442</p>
+                    <p>501(c)(3) Non-Profit Organization</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="about.html">About Us</a>
+                    <a href="impact.html">Our Impact</a>
+                    <a href="events.html">Events</a>
+                    <a href="give.html">Ways to Give</a>
+                    <a href="contact.html">Contact Us</a>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Get Involved</h3>
+                    <a href="give.html">Make a Donation</a>
+                    <a href="give.html#monthly">Monthly Giving</a>
+                    <a href="contact.html">Volunteer</a>
+                    <a href="about.html#board">Board Membership</a>
+                    <a href="events.html">Attend an Event</a>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Phone: <a href="tel:408-535-6310">408-535-6310</a></p>
+                    <p>Email: <a href="mailto:educationfoundationphs@gmail.com">educationfoundationphs@gmail.com</a></p>
+                    <div style="margin-top: 1rem;">
+                        <a href="#" style="display: inline; margin-right: 1rem;">📘 Facebook</a>
+                        <a href="#" style="display: inline; margin-right: 1rem;">📷 Instagram</a>
+                        <a href="#" style="display: inline;">🐦 Twitter</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Pioneer High School Education Foundation. All rights reserved. |
+                   <a href="#" style="color: white;">Privacy Policy</a> |
+                   <a href="#" style="color: white;">Terms of Use</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
